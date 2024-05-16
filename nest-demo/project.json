@@ -1,0 +1,24 @@
+{
+  "name": "nest-demo",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "nest-demo/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "nest-demo:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "nest-demo:build:development"
+        },
+        "production": {
+          "buildTarget": "nest-demo:build:production"
+        }
+      }
+    }
+  }
+}
